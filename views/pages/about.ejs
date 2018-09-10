@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+        <h1>About</h1>
+        <h2>My name is <%= profile.firstname %> <%= profile.lastname %></h2>
+        <h2>Loop</h2>
+
+    <ul>
+        <% profile.experiences.forEach(function(exp) { %>
+            <li><%= exp %></li>
+        <% }); %>
+    </ul>
+        </div>
+<% include ../partials/footer %>

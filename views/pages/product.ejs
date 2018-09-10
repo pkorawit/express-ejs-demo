@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+<table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse table-responsive">
+    <thead class="thead-inverse|thead-default">
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(function(product) { %>
+            <tr>
+                <td scope="row"><%= product.id %></td>
+                <td><%= product.title %></td>
+                <td><%= product.price %></td>
+                <td><a name="detail" id="" class="btn btn-primary" href="/products/detail/<%= product.id %>" role="button">Edit</a></td>
+            </tr>
+            <% }); %>
+        </tbody>
+</table>
+<% include ../partials/footer %>
