@@ -103,8 +103,9 @@ app.get('/products/detail/:pid', function (req, res) {
 
 
 // Update detail page 
-app.post('/products/detail/:pid', function (req, res) {
+app.post('/products/update/', function (req, res) {
     console.log("UPDATE:" + req.params.pid);
+    console.log("UPDATE:" + JSON.stringify(req.body));
     res.redirect('/products');
 });
 
