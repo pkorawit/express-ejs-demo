@@ -1,6 +1,6 @@
 var data = require('./data.js');
 const pgp = require('pg-promise')();
-var db = pgp(process.env.DATABASE_URL);
+var db = pgp(process.env.HEROKU_POSTGRESQL_WHITE_URL);
 
 var mysql = require('mysql')
 var connection = mysql.createConnection({
