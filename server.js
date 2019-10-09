@@ -56,6 +56,25 @@ app.get('/products/detail/:pid', function(req, res) {
           })                
 });
 
+// products edit page 
+app.get('/products/edit/:pid', function(req, res) {
+    db.any('select * from products where id =' + req.params.pid)
+          .then(function (data) {
+            console.log('DATA:', data)
+            res.render('pages/edit', {               
+                product : data[0]
+            });
+          })
+          .catch(function (error) {
+            console.log('ERROR:', error)
+          })                
+});
+
+// products add page 
+app.get('/products/add', function(req, res) {
+    res.render('pages/addnew');       
+});
+
 
 // download
 app.get('/download', function(req, res) {

@@ -2,20 +2,23 @@
 <div class="form-group">
   <label for="">ID</label>
   <input type="text"
-    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly value="<%= product.id %>">
+    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="<%= product.id %>">
   <small id="helpId" class="form-text text-muted">Help text</small>
   <label for="">Title</label>
   <input type="text"
-    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly value="<%= product.title %>">
+    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="<%= product.title %>">
   <small id="helpId" class="form-text text-muted">Help text</small>  
   <label for="">Prize</label>
   <input type="text"
-    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly value="<%= product.price %>">
+    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="<%= product.price %>">
   <small id="helpId" class="form-text text-muted">Help text</small>
   <label for="">Create At</label>
   <input type="datetime"
-    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly value="<%= product.created_at %>">
+    class="form-control" name="" id="" aria-describedby="helpId" placeholder="" value="<%= product.created_at %>">
   <small id="helpId" class="form-text text-muted">Help text</small>
-  <a class="btn btn-primary" href="/products"><< Back</a>
+  
+ 
+  <a class="btn btn-primary" href="/products">Save</a> 
+  <a class="btn btn-default" href="/products">Cancel</a> 
 </div>
 <% include ../partials/footer %>
