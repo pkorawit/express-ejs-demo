@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<table class="table table-{1:striped|sm|bordered|hover|inverse} table-inverse table-responsive">
+    <thead class="thead-inverse|thead-default">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Firstname</th>
+            <th>Lastname</th>            
+        </tr>
+        </thead>
+        <tbody>
+            <% students.forEach(function(student) { %>
+            <tr>
+                <td scope="row"><%= student.sid %></td>
+                <td><%= student.title %></td>
+                <td><%= student.firstname %></td>
+                <td><%= student.lastname %></td>                
+            </tr>
+            <% }); %>
+        </tbody>
+</table>
+<% include ../partials/footer %>

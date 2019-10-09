@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Subject Code</th>
+            <th>Title</th>
+            <th>Credits</th>
+            <th>Sections</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% subjects.forEach(function(subject) { %>
+        <tr>
+            <td scope="row"><%= subject.code %></td>
+            <td><%= subject.title %></td>
+            <td><%= subject.credits %></td>
+            <td><%= subject.sections %></td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>
+<% include ../partials/footer %>
